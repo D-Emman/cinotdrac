@@ -41,6 +41,12 @@ dependencies:
   provider: ^6.1.2
   cloud_firestore: ^5.6.0
   custom_navigation_bar: ^0.8.2
+  supabase_flutter: ^2.5.8
+  flutter_secure_storage: ^9.2.2
+  shared_preferences: ^2.3.2
+  local_auth: ^2.1.8
+  carousel_slider: ^5.0.0
+  fl_chart: ^0.68.0
 
 dev_dependencies:
   flutter_test:
