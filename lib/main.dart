@@ -77,17 +77,11 @@ class Bootstrapper extends StatelessWidget {
 
 
 
-// ===============================
 
 
 
 // ===============================
-
-
-
-
-// ===============================
-// Supabase quick schema (save as notes)
+// Supabase quick schema todo
 // ===============================
 /*
 -- auth handled by Supabase Auth (email/password)
