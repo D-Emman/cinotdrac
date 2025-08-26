@@ -59,7 +59,6 @@ class CardtonicsApp extends StatelessWidget {
 /// Decides whether to show Login or the App shell
 class Bootstrapper extends StatelessWidget {
   const Bootstrapper({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Consumer<AuthProvider>(
@@ -77,10 +76,6 @@ class Bootstrapper extends StatelessWidget {
 
 
 
-
-
-
-// ===============================
 // Supabase quick schema todo
 // ===============================
 /*
