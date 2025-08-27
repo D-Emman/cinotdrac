@@ -1,5 +1,4 @@
 
-// ===============================
 // lib/tabs/settings_tab.dart
 // ===============================
 import 'package:flutter/material.dart';
