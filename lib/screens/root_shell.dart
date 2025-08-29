@@ -1,6 +1,5 @@
 
-// lib/screens/root_shell.dart (Bottom nav + 4 tabs)
-// ===============================
+// lib/screens/root_shell.dart (Bottom nav + 4 tabs
 import 'package:flutter/material.dart';
 import '../tabs/home_tab.dart';
 import '../tabs/wallet_tab.dart';
