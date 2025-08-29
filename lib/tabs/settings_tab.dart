@@ -60,6 +60,7 @@ class SettingsTab extends StatelessWidget {
   }
 }
 
+
 class _SettingsItem extends StatelessWidget {
   final IconData icon; final String title; final VoidCallback onTap;
   const _SettingsItem({required this.icon, required this.title, required this.onTap});
