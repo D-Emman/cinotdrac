@@ -6,16 +6,19 @@ import '../models/models.dart';
 import '../services/supabase_service.dart';
 
 class WalletProvider extends ChangeNotifier {
+
   double balance = 0.0;
   List<BankAccount> recentAccounts = [];
 
   Future<void> bootstrap() async {
+
     // fetch balance and recent accounts from Supabase (or keep empty for first run)
     await fetchBalance();
     await fetchRecentAccounts();
   }
 
   Future<void> fetchBalance() async {
+
     // Example: Supabase function or table 'wallets' with column 'balance'
     try {
       final data = await Supa.client.rpc('get_wallet_balance').maybeSingle();
@@ -35,6 +38,7 @@ class WalletProvider extends ChangeNotifier {
     }
     notifyListeners();
   }
+
 
   Future<void> addBankAccount(BankAccount acct) async {
     await Supa.client.from('bank_accounts').insert(acct.toMap());

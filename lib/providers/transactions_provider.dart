@@ -5,6 +5,7 @@ import '../models/models.dart';
 import '../services/supabase_service.dart';
 
 class TransactionsProvider extends ChangeNotifier {
+
 List<TransactionItem> items = [];
 TxType filter = TxType.all;
 
