@@ -18,8 +18,8 @@ Future<void> main() async {
 
   // TODO: Replace with your Supabase URL and anon key
   await Supabase.initialize(
-    url: const String.fromEnvironment('SUPABASE_URL', defaultValue: 'https://YOUR-PROJECT.supabase.co'),
-    anonKey: const String.fromEnvironment('SUPABASE_ANON_KEY', defaultValue: 'YOUR-ANON-KEY'),
+    url: const String.fromEnvironment('SUPABASE_URL', defaultValue: 'https://tffsmkjsmjpnhqvfeypa.supabase.co'),
+    anonKey: const String.fromEnvironment('SUPABASE_ANON_KEY', defaultValue: 'sb_secret_bBjOr7P3zZDDrTNsFH-uhQ_O16DNSq9'),
   );
 
   runApp(const CardtonicsApp());

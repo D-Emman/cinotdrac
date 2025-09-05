@@ -22,6 +22,22 @@ class AuthProvider extends ChangeNotifier {
     }
   }
 
+  // lib/providers/auth_provider.dart
+  Future<bool> signUp(String email, String password, String name) async {
+    try {
+      final res = await Supa.client.auth.signUp(
+        email: email,
+        password: password,
+        data: {'name': name}, // metadata saved in Supabase
+      );
+      return res.user != null; // true if account created
+    } catch (e) {
+      debugPrint("SignUp error: $e");
+      return false;
+    }
+  }
+
+
   Future<void> loginWithPassword({required String email, required String password}) async {
     final res = await Supa.client.auth.signInWithPassword(email: email, password: password);
     isAuthenticated = res.session != null;

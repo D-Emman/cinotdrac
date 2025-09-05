@@ -1,5 +1,6 @@
 // lib/screens/login_screen.dart
 
+import 'package:cardtonics/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/auth_provider.dart';
@@ -11,6 +12,7 @@ class LoginScreen extends StatefulWidget {
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
+
 
 class _LoginScreenState extends State<LoginScreen> {
   final _emailCtrl = TextEditingController();
@@ -31,11 +33,11 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 20),
+              const SizedBox(height: 12),
               Text('Welcome${auth.username != null ? ', ${auth.username}' : ''}', style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w700)),
               const SizedBox(height: 8),
               Text(lockedMode ? 'Enter your password to continue' : 'Sign in to continue'),
-              const SizedBox(height: 24),
+              const SizedBox(height: 15),
               if (!lockedMode) ...[
                 TextField(controller: _emailCtrl, decoration: const InputDecoration(labelText: 'Email', border: OutlineInputBorder())),
                 const SizedBox(height: 12),
@@ -45,7 +47,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 obscureText: true,
                 decoration: const InputDecoration(labelText: 'Password', border: OutlineInputBorder()),
               ),
-              const SizedBox(height: 12),
+              const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -53,7 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   TextButton(onPressed: () => context.read<AuthProvider>().logout(), child: const Text('Log out')),
                 ],
               ),
-              const SizedBox(height: 12),
+              const SizedBox(height: 10),
               if (settings.biometricsEnabled)
                 Center(
                   child: IconButton(
@@ -86,6 +88,17 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                   child: Text(_loading ? 'Signing in...' : 'Sign In'),
                 ),
+              ),
+              const SizedBox(height: 12),
+
+              TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const SignUpScreen()),
+                  );
+                },
+                child: const Text("New here? Create an account"),
               ),
               const SizedBox(height: 12),
             ],
