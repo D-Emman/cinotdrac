@@ -15,13 +15,14 @@ class RootShell extends StatefulWidget {
 
 class _RootShellState extends State<RootShell> {
   int _index = 0;
-  final _pages = const [HomeTab(), WalletTab(), TransactionsTab(), SettingsTab()];
+  final _pages =  [HomeTab(), WalletTab(), TransactionsTab(), SettingsTab()];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: _pages[_index],
       bottomNavigationBar: NavigationBar(
+
         selectedIndex: _index,
         onDestinationSelected: (i) => setState(() => _index = i),
         destinations: const [

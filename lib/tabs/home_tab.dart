@@ -7,22 +7,26 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/settings_provider.dart';
 import '../providers/wallet_provider.dart';
+import "../providers/auth_provider.dart";
 
 class HomeTab extends StatelessWidget {
-  const HomeTab({super.key});
+   HomeTab({super.key});
 
   @override
   Widget build(BuildContext context) {
+    String? Username = "Emmanuel";
     final settings = context.watch<SettingsProvider>();
     final wallet = context.watch<WalletProvider>();
-
+    
+    Username = AuthProvider().username;
     return Scaffold(
       appBar: AppBar(
         title: Row(
           children: [
             const Text('Welcome, '),
             Text(
-              'emmanuelutulu', // Replace with real user display name from Auth provider if desired
+              "Emmanuel"
+             , // Replace with real user display name from Auth provider if desired
               style: const TextStyle(fontWeight: FontWeight.w700),
             ),
           ],

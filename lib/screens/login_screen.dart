@@ -42,7 +42,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 TextField(controller: _emailCtrl, decoration: const InputDecoration(labelText: 'Email', border: OutlineInputBorder())),
                 const SizedBox(height: 12),
               ],
+
               TextField(
+
                 controller: _passwordCtrl,
                 obscureText: true,
                 decoration: const InputDecoration(labelText: 'Password', border: OutlineInputBorder()),

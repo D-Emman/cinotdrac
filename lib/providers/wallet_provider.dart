@@ -7,6 +7,7 @@ import '../services/supabase_service.dart';
 
 class WalletProvider extends ChangeNotifier {
 
+
   double balance = 0.0;
   List<BankAccount> recentAccounts = [];
 
