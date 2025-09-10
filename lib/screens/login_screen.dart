@@ -1,5 +1,4 @@
 // lib/screens/login_screen.dart
-
 import 'package:cardtonics/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -103,6 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: const Text("New here? Create an account"),
               ),
               const SizedBox(height: 12),
+
             ],
           ),
         ),
