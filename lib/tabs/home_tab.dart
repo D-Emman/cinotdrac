@@ -26,6 +26,7 @@ class HomeTab extends StatelessWidget {
             const Text('Welcome, '),
             Text(
               "Emmanuel"
+
              , // Replace with real user display name from Auth provider if desired
               style: const TextStyle(fontWeight: FontWeight.w700),
             ),
@@ -56,6 +57,9 @@ class HomeTab extends StatelessWidget {
               title: 'Just Gadgets',
               subtitle: 'Authentic + Affordable',
               trailing: const Icon(Icons.headphones_outlined),
+              mycolor: Colors.greenAccent
+              ,
+
             ),
             const SizedBox(height: 12),
             Row(
@@ -138,11 +142,13 @@ class _SectionCard extends StatelessWidget {
   final String title;
   final String subtitle;
   final Widget trailing;
-  const _SectionCard({required this.title, required this.subtitle, required this.trailing});
+  final Color mycolor;
+  const _SectionCard({required this.title, required this.subtitle, required this.trailing, required this.mycolor});
 
   @override
   Widget build(BuildContext context) {
     return Container(
+
       height: 90,
       decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16)),
       child: ListTile(
