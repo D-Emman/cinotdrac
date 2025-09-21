@@ -13,6 +13,7 @@ TxType filter = TxType.all;
   await refresh();
 }
 
+
 Future<void> refresh() async {
   try {
     final res = filter == TxType.all
@@ -51,3 +52,4 @@ void setFilter(TxType t) {
     return map;
     }
     }
+

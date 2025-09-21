@@ -30,7 +30,9 @@ class TransactionsTab extends StatelessWidget {
               children: [Text('Available Balance', style: TextStyle(color: Colors.black54)), Text('🙈🙈🙈🙈🙈', style: TextStyle(fontSize: 22, fontWeight: FontWeight.w800))],
             ),
           ),
+
           Padding(
+
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Row(
               children: [
