@@ -48,6 +48,8 @@ class CardtonicsApp extends StatelessWidget {
               scaffoldBackgroundColor: const Color(0xFFF7F8FB),
               appBarTheme: const AppBarTheme(centerTitle: false),
             ),
+
+            //home
             home: const Bootstrapper(),
           );
         },
