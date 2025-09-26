@@ -43,6 +43,7 @@ void setFilter(TxType t) {
     refresh();
     }
 
+    //mapping
     Map<TxType, double> totalsByType() {
     final map = <TxType, double>{};
     for (final t in TxType.values) { map[t] = 0; }
